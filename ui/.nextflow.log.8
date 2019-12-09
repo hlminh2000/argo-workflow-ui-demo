@@ -1,0 +1,67 @@
+Dec.-08 21:02:42.379 [main] DEBUG nextflow.cli.Launcher - $> nextflow run 'https://github.com/nextflow-io/hello.git' -with-weblog 'http://localhost:8081' -name 52b0574b-3d50-4ee7-b110-b81a81631778
+Dec.-08 21:02:43.263 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
+Dec.-08 21:02:43.581 [main] DEBUG nextflow.scm.AssetManager - Repository URL: https://github.com/nextflow-io/hello.git; Project: nextflow-io/hello; Hub provider: github
+Dec.-08 21:02:46.098 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/mha/.nextflow/assets/nextflow-io/hello/.git/config; branch: master; remote: origin; url: https://github.com/nextflow-io/hello.git
+Dec.-08 21:02:46.623 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/mha/.nextflow/assets/nextflow-io/hello/.git/config; branch: master; remote: origin; url: https://github.com/nextflow-io/hello.git
+Dec.-08 21:02:46.624 [main] INFO  nextflow.cli.CmdRun - Launching `nextflow-io/hello` [52b0574b-3d50-4ee7-b110-b81a81631778] - revision: a9012339ce [master]
+Dec.-08 21:02:48.590 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/mha/.nextflow/assets/nextflow-io/hello/nextflow.config
+Dec.-08 21:02:48.592 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/mha/.nextflow/assets/nextflow-io/hello/nextflow.config
+Dec.-08 21:02:48.607 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec.-08 21:02:49.066 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
+Dec.-08 21:02:49.175 [main] DEBUG nextflow.Session - Session uuid: 037d3480-7095-4bc4-945d-9213ec9829f7
+Dec.-08 21:02:49.175 [main] DEBUG nextflow.Session - Run name: 52b0574b-3d50-4ee7-b110-b81a81631778
+Dec.-08 21:02:49.176 [main] DEBUG nextflow.Session - Executor pool size: 8
+Dec.-08 21:02:49.416 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.10.0 build 5170
+  Created: 21-10-2019 15:07 UTC (11:07 EDT)
+  System: Mac OS X 10.14
+  Runtime: Groovy 2.5.8 on OpenJDK 64-Bit Server VM 13.0.1+9
+  Encoding: UTF-8 (UTF-8)
+  Process: 49281@olm-mha-2.local [192.168.100.109]
+  CPUs: 8 - Mem: 16 GB (29.4 MB) - Swap: 15 GB (664.8 MB)
+Dec.-08 21:02:49.556 [main] DEBUG nextflow.Session - Work-dir: /Users/mha/repos/argo/workflow/ui/work [Mac OS X]
+Dec.-08 21:02:49.557 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/mha/.nextflow/assets/nextflow-io/hello/bin
+Dec.-08 21:02:49.662 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Dec.-08 21:02:49.688 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec.-08 21:02:50.252 [main] DEBUG nextflow.Session - Session start invoked
+Dec.-08 21:02:50.717 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:51.307 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec.-08 21:02:51.363 [main] WARN  nextflow.script.BaseScript - The use of `echo` method is deprecated
+Dec.-08 21:02:51.918 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec.-08 21:02:51.919 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec.-08 21:02:51.957 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec.-08 21:02:51.971 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Dec.-08 21:02:52.203 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > sayHello -- maxForks: 8
+Dec.-08 21:02:52.257 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
+Dec.-08 21:02:52.258 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec.-08 21:02:52.259 [main] DEBUG nextflow.Session - Session await
+Dec.-08 21:02:52.738 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec.-08 21:02:52.747 [Task submitter] INFO  nextflow.Session - [69/97c2cc] Submitted process > sayHello (4)
+Dec.-08 21:02:52.757 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec.-08 21:02:52.758 [Task submitter] INFO  nextflow.Session - [4f/763381] Submitted process > sayHello (2)
+Dec.-08 21:02:52.772 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec.-08 21:02:52.772 [Task submitter] INFO  nextflow.Session - [da/81b555] Submitted process > sayHello (1)
+Dec.-08 21:02:52.780 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec.-08 21:02:52.781 [Task submitter] INFO  nextflow.Session - [66/b35e59] Submitted process > sayHello (3)
+Dec.-08 21:02:52.844 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:52.853 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:52.872 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: sayHello (4); status: COMPLETED; exit: 0; error: -; workDir: /Users/mha/repos/argo/workflow/ui/work/69/97c2cc645e0c39e2b82a9459383f1b]
+Dec.-08 21:02:52.877 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:52.898 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: sayHello (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/mha/repos/argo/workflow/ui/work/4f/763381be579337263e378f81e88cbe]
+Dec.-08 21:02:52.909 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: sayHello (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/mha/repos/argo/workflow/ui/work/da/81b55519b84c92882b4bdc819c0579]
+Dec.-08 21:02:52.923 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: sayHello (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/mha/repos/argo/workflow/ui/work/66/b35e59584c09c7a9aa2e15b279cdc8]
+Dec.-08 21:02:52.933 [main] DEBUG nextflow.Session - Session await > all process finished
+Dec.-08 21:02:52.945 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec.-08 21:02:52.953 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=4; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=226ms; failedDuration=0ms; cachedDuration=0ms]
+Dec.-08 21:02:53.003 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.113 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.121 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.259 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.273 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.353 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.498 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.508 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.520 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.667 [Actor Thread 1] DEBUG nextflow.trace.WebLogObserver - Successfully send message to http://localhost:8081 -- received status code 200.
+Dec.-08 21:02:53.859 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Dec.-08 21:02:53.879 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
