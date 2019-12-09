@@ -4,10 +4,10 @@ import typeDefs from "./typedefs";
 import { RunDetail, RunStatus } from "./types";
 import GraphQLJSON from "graphql-type-json";
 
-const WORKFLOW_SEARCH_API =
-  process.env.WORKFLOW_SEARCH_API || `http://localhost:7000/search`;
-const WORKFLOW_RELAY_API =
-  process.env.WORKFLOW_RELAY_API || `http://localhost:7000/relay`;
+const SEARCH_API =
+  process.env.REACT_APP_SEARCH_API || `http://localhost:7000/search`;
+const MANAGEMENT_API =
+  process.env.REACT_APP_MANAGEMENT_API || `http://localhost:7000/relay`;
 const WORKFLOWS = [
   {
     id: "nextflow-hello",
@@ -30,12 +30,12 @@ const WORKFLOWS = [
 ];
 
 const getSingleRun = async (runId: string): Promise<RunDetail> =>
-  fetch(urlJoin(WORKFLOW_SEARCH_API, `runs/${runId}`)).then(res => res.json());
+  fetch(urlJoin(SEARCH_API, `runs/${runId}`)).then(res => res.json());
 
 const triggerWorkFlow = ({
   workflow_url = "https://github.com/nextflow-io/hello.git"
 }): Promise<{ run_id: string }> =>
-  fetch(urlJoin(WORKFLOW_RELAY_API, "/runs"), {
+  fetch(urlJoin(MANAGEMENT_API, "/runs"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ workflow_url })
@@ -53,7 +53,7 @@ const listRuns = ({
 }> =>
   fetch(
     urlJoin(
-      WORKFLOW_SEARCH_API,
+      SEARCH_API,
       `runs?page_size=${pageSize}`,
       !!pageToken ? `&page_token=${pageToken}` : ""
     )
