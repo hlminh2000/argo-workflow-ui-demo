@@ -25,3 +25,4 @@ yarn-error.log*
 nextflow
 .nextflow.*
 work
+.nextflow
