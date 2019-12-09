@@ -11,6 +11,7 @@ import AppBar, {
   MenuItem
 } from "@icgc-argo/uikit/AppBar";
 import { ThemeProvider } from "@icgc-argo/uikit";
+import Container from "@icgc-argo/uikit/Container";
 import Modal from "@icgc-argo/uikit/Modal";
 import { SchemaLink } from "apollo-link-schema";
 import { InMemoryCache } from "apollo-cache-inmemory";
@@ -77,7 +78,14 @@ const App: React.FC = () => {
                 <Home />
               </Route>
               <Route exact path="/workflows">
-                <div>/workflows</div>
+                <Container
+                  className={css`
+                    margin: 10px;
+                    padding: 10px;
+                  `}
+                >
+                  List of available workflows
+                </Container>
               </Route>
               <Route exact path="/voyager">
                 <Voyagers client={client} />
