@@ -105,7 +105,7 @@ export default ({ runId }: { runId: string }) => {
         </div>
       )}
 
-      <div
+      {/* <div
         className={css`
           padding: 5px 0px;
           display: flex;
@@ -115,7 +115,7 @@ export default ({ runId }: { runId: string }) => {
         <Button variant="text" size={"md"}>
           rerun
         </Button>
-      </div>
+      </div> */}
       {!!data && (
         <Container loading={loading}>
           <Tabs value={activeTab}>

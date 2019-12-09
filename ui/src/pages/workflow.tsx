@@ -149,31 +149,46 @@ export default ({ workflowId }: { workflowId: string }) => {
         <div>
           <Typography variant="subtitle">
             Workflow ID: <strong>{data.workflow.id}</strong>
-            <Button onClick={onNewRunClick}>new run</Button>
-            {newRunModalShown && (
-              <ModalPortal>
-                <Modal
-                  title="Some famcy form to input params"
-                  onCancelClick={onNewRunCanceled}
-                  onActionClick={onNewRunConfirmed}
-                >
-                  <InputLabel>
-                    Files source
-                    <Input aria-label="test" />
-                  </InputLabel>
-                  <Input aria-label="test" />
-                  <Input aria-label="test" />
-                </Modal>
-              </ModalPortal>
-            )}
             {loading && (
               <ModalPortal>
                 <DNALoader />
               </ModalPortal>
             )}
           </Typography>
+          <Typography variant="label">
+            url: <a href={data.workflow.url}>{data.workflow.url}</a>
+          </Typography>
         </div>
       )}
+      <div
+        className={css`
+          margin: 10px 0px;
+        `}
+      >
+        <Button onClick={onNewRunClick}>new run</Button>
+        {newRunModalShown && (
+          <ModalPortal>
+            <Modal
+              title="Some famcy form to input params"
+              onCancelClick={onNewRunCanceled}
+              onActionClick={onNewRunConfirmed}
+            >
+              <InputLabel>
+                Files source
+                <Input aria-label="test" />
+              </InputLabel>
+              <InputLabel>
+                Input Analysis
+                <Input aria-label="test" />
+              </InputLabel>
+              <InputLabel>
+                Some other params?
+                <Input aria-label="test" />
+              </InputLabel>
+            </Modal>
+          </ModalPortal>
+        )}
+      </div>
       <Container
         className={css`
           padding: 10px;
@@ -191,9 +206,9 @@ export default ({ workflowId }: { workflowId: string }) => {
           <Typography variant="sectionHeader" bold color="primary">
             Workflow runs
           </Typography>
-          <Button size="sm" disabled={!selectedRunIds.length}>
+          {/* <Button size="sm" disabled={!selectedRunIds.length}>
             rerun
-          </Button>
+          </Button> */}
         </div>
         <RunsTable
           runs={data ? data.workflow.runs.runs : []}

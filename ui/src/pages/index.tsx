@@ -102,9 +102,9 @@ export default () => {
           <Typography variant="sectionHeader" bold color="primary">
             Workflow runs
           </Typography>
-          <Button size="sm" disabled={!selectedRunIds.length}>
+          {/* <Button size="sm" disabled={!selectedRunIds.length}>
             rerun
-          </Button>
+          </Button> */}
         </div>
         <RunsTable
           runs={data ? data.runList.runs : []}
