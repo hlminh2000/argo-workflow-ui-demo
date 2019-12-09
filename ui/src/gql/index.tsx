@@ -4,8 +4,10 @@ import typeDefs from "./typedefs";
 import { RunDetail, RunStatus } from "./types";
 import GraphQLJSON from "graphql-type-json";
 
-const WORKFLOW_SEARCH_API = `http://localhost:7000/search`;
-const WORKFLOW_RELAY_API = `http://localhost:7000/relay`;
+const WORKFLOW_SEARCH_API =
+  process.env.WORKFLOW_SEARCH_API || `http://localhost:7000/search`;
+const WORKFLOW_RELAY_API =
+  process.env.WORKFLOW_RELAY_API || `http://localhost:7000/relay`;
 const WORKFLOWS = [
   {
     id: "nextflow-hello",
