@@ -52,7 +52,13 @@ const App: React.FC = () => {
     <ApolloProvider client={client}>
       <ThemeProvider>
         <Router>
-          <div>
+          <div
+            className={css`
+              position: absolute;
+              height: 100%;
+              width: 100%;
+            `}
+          >
             <AppBar>
               <Section>
                 <Logo></Logo>

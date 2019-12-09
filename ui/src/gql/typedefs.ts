@@ -35,12 +35,34 @@ export default gql`
     runs: [Run]
     nextPageToken: String
   }
+  type AnalysisType {
+    id: ID!
+    name: String!
+  }
+  type Analysis {
+    id: ID!
+    analysisType: AnalysisType
+    workflow: Workflow
+    runs(pageSize: Int = 10, pageToken: String): RunsPage
+    donors: [Donor]
+  }
   type Workflow {
     id: ID!
     name: String
     version: String
     url: String
     runs: RunsPage
+    output_analyses: [Analysis]
+    input_analysis_types: [AnalysisType]
+    output_analysis_type: AnalysisType
+  }
+  type Donor {
+    id: ID!
+    name: String
+    files: [File]
+  }
+  type File {
+    id: ID!
   }
   type Query {
     listRuns(pageSize: Int = 10, pageToken: String): RunsPage
