@@ -174,11 +174,7 @@ export default ({ workflowId }: { workflowId: string }) => {
               onActionClick={onNewRunConfirmed}
             >
               <InputLabel>
-                Files source
-                <Input aria-label="test" />
-              </InputLabel>
-              <InputLabel>
-                Input Analysis
+                Input Analysis ID
                 <Input aria-label="test" />
               </InputLabel>
               <InputLabel>
